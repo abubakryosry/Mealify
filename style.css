@@ -1,0 +1,701 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+.clear-fix{
+    clear: both;
+}
+h2{
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 65px;
+    color: #37373f;
+}
+p,a{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #4f4f5a;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-block: 50px;
+}
+/* home section */
+/* start of nav bar */
+.home .nav{
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.106);
+    background-color: white;
+    margin-top: 0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+.home .nav .container{
+    padding: 20px 5px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.home .nav .container .icons{
+    font-size: 25px;
+    color: rgb(33, 37, 41);
+}
+.home .left h1 a{
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    color: rgb(33, 37, 41);
+    line-height: 0.8;
+}
+.home .left h1 a::after{
+    content: ".";
+    color: rgb(230, 20, 20);
+    font-size: 40px;
+}
+.home .nav .container .center ul{
+    padding-left: 0;
+    display: flex;
+    gap: 0px 15px;
+    font-weight: 600;
+}
+
+.home .nav .container .center .current{
+    position: relative;
+    text-decoration-color:rgb(230, 20, 20);
+    color: rgb(33, 37, 41);
+}
+.home .nav .container .center .current::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 30px;
+    background-color:rgb(230, 20, 20);
+}
+
+.home .nav .container .center ul li{
+    list-style-type: none;
+}
+.home .nav .container .center ul li a:hover {
+    color: rgb(33, 37, 41);
+}
+
+.home .nav .container .center ul li a{
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+.home .nav .container .center ul li:hover a::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 30px;
+    background-color:rgb(230, 20, 20);
+}
+.home .nav .container .center ul li a{
+    text-decoration: none;
+    color: #7f7f90;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+/* end of nav bar */
+/* start of home content */
+.home{
+    background-color: rgb(238, 238, 238);
+    overflow: auto;
+}
+.home .header .container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+}
+.home .header .container .right{
+    width: 100%;
+    filter: drop-shadow(0 0 10px rgb(0, 0, 0));
+}
+.home .header .container .right img{
+    width: 100%;
+}
+.home .header .container .right img:hover{
+    animation: shake 0.5s infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+.home .header .container .left {
+    text-align: center;
+}
+.home .header .container .left h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.home .header .container .left .btn1{
+    border: 0px;
+    padding: 10px 15px;
+    border-radius: 0 15px 15px 15px;
+    background-color:rgb(230, 20, 20); 
+    margin: 0px 35px 0 0;
+}
+
+.home .header .container .left .btn{
+    border: 0px;
+    padding: 0px 15px;
+    background-color: transparent;
+    color: #37373f;
+}
+.home .header .container .left p{
+    margin-bottom: 15px;
+}
+.home .header .container .left .btn a{
+    color: #212529;
+    font-weight: 600;
+}
+.home .header .container .left .btn .icons{
+    color: #212529;
+    font-weight: 600;
+    font-size: 24px;
+    margin-right:25px ;
+    padding: 15px 15px 15px 20px ;
+    background-color: white;
+    border-radius: 50%;
+}
+.home .header .container .left a{
+    text-decoration: none;
+    color: white;
+}
+/* end of home content*/
+/* start of chefs */
+.chefs .content h2{
+    font-weight: 200;
+    font-size: 50px;
+}
+.chefs .content span{
+    color:rgb(230, 20, 20);
+    font-weight: 200;
+}
+.chefs .cards{
+    display: flex;
+    flex-direction: column;
+}
+.chefs .cards .card{
+    border-radius: 10px;
+    margin-top: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.106);
+    transition: all 0.5s ease 0s;
+}
+.chefs .cards .card:hover{
+    transform: scale(1.05);
+}
+.chefs .cards .card .img{
+    position: relative;
+}
+.chefs .cards .card img{
+    width: 100%;
+    border-radius: 10px;
+}
+.chefs .cards .card .img::before{
+    content: "";
+    position: absolute;
+    background-image: url(./images/wave\ \(1\).svg);
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+}
+.chefs .cards .card .social{
+    background-color: rgba(228, 228, 228, 0.5);
+    position: absolute;
+    display: flex;
+    gap: 10px 20px;
+    padding: 10px;
+    border-radius: 5px;
+    flex-direction: column;
+    right: 0px;
+    top: 35px;
+    opacity: 0;
+    transition:  all 0.2s ease-in-out 0.5s;
+}
+.chefs .cards .card:hover .social{
+    transform: translateX(-10px);
+    opacity: 1;
+}
+.chefs .cards .card .cardcon{
+    padding-bottom: 25px;
+}
+.chefs .cards .card .cardcon h3{
+    font-family: "Inter", sans-serif;
+    color: #37373f;
+    margin-block: 10px;
+}
+.chefs .cards .card .cardcon p{
+    font-size: 0.9375rem;
+    margin-top: 10px;
+}
+
+/* end of chefs */
+/* start of gallery */
+.gallery{
+    background-color: rgb(238, 238, 238);
+}
+.gallery .content h2{
+    font-weight: 200;
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+.gallery .content span{
+    color:rgb(230, 20, 20);
+    font-weight: 200;
+}
+.gallery .imgs{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px 5px;
+    width: 100%;
+}
+/* hover starting */
+.gallery .imgs #pizza{
+    position: relative;
+    transition: all 0.5s ease-in;
+}
+.gallery .imgs #pizza:hover img{
+    transform: scale(1.05);
+}
+
+.gallery .imgs #steak{
+    position: relative;
+    transition: all 0.5s ease-in;
+}
+.gallery .imgs #steak:hover img{
+    transform: scale(1.05);
+}
+.gallery .imgs #burger{
+    position: relative;
+    transition: all 0.5s ease-in;
+}
+.gallery .imgs #burger:hover img{
+    transform: scale(1.05);
+}
+.gallery .imgs #pizza-slice{
+    position: relative;
+    transition: all 0.5s ease-in;
+}
+.gallery .imgs #pizza-slice:hover img{
+    transform: scale(1.05);
+}
+.gallery .imgs #fried{
+    position: relative;
+    transition: all 0.5s ease-in;
+}
+.gallery .imgs #fried:hover img{
+    transform: scale(1.05);
+}
+.gallery .imgs #kofta{
+    position: relative;
+    transition: all 0.5s ease-in;
+}
+.gallery .imgs #kofta:hover img{
+    transform: scale(1.05);
+}
+.gallery .imgs #eggs{
+    position: relative;
+    transition: all 0.5s ease-in;
+}
+.gallery .imgs #eggs:hover img{
+    transform: scale(1.05);
+}
+
+.gallery .imgs #pizza .layer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    width: 102%;
+    height: 0%;
+    bottom: 2px;
+    left: -2px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease-in;
+}
+.gallery .imgs #pizza:hover .layer{
+    opacity: 1;
+    height: 100%;
+}
+.gallery .imgs #steak .layer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    width: 102%;
+    height: 0%;
+    bottom: -4px;
+    left: -2px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease-in;
+}
+.gallery .imgs #steak:hover .layer{
+    opacity: 1;
+    height: 102%;
+}
+.gallery .imgs #burger .layer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    width: 102%;
+    height: 0%;
+    bottom: 2px;
+    left: -2px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease-in;
+}
+.gallery .imgs #burger:hover .layer{
+    opacity: 1;
+    height: 100%;
+}
+.gallery .imgs #pizza-slice .layer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    width: 102%;
+    height: 0%;
+    bottom: -2px;
+    left: -2px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease-in;
+}
+.gallery .imgs #pizza-slice:hover .layer{
+    opacity: 1;
+    height: 102%;
+}
+.gallery .imgs #fried .layer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    width: 102%;
+    height: 0%;
+    bottom: 2px;
+    left: -2px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease-in;
+}
+.gallery .imgs #fried:hover .layer{
+    opacity: 1;
+    height: 100%;
+}
+.gallery .imgs #kofta .layer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    width: 102%;
+    height: 0%;
+    bottom: 2px;
+    left: -2px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease-in;
+}
+.gallery .imgs #kofta:hover .layer{
+    opacity: 1;
+    height: 100%;
+}
+.gallery .imgs #eggs .layer{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    width: 102%;
+    height: 0%;
+    bottom: 2px;
+    left: -2px;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease-in;
+}
+.gallery .imgs #eggs:hover .layer{
+    opacity: 1;
+    height: 100%;
+}
+/* hover ending */
+
+.gallery .imgs .layer p{
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    
+}
+.gallery .imgs .layer h2{
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+}
+.gallery .imgs img{
+    width: 100%;
+    border: 5px solid white;
+}
+.gallery .imgs #burger{
+    order: 2;
+}
+.gallery .imgs #steak{
+    order: 5;
+}
+.gallery .imgs #fried{
+    order: 6;
+}
+.gallery .imgs #kofta{
+    order: 7;
+}
+.gallery .imgs #eggs{
+    order: 4;
+}
+.gallery .imgs #pizza-slice{
+    order: 3;
+}
+/* end of gallery */
+/* start of contact */
+.contact .content h2{
+    font-weight: 200;
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+.contact .content span{
+    color:rgb(230, 20, 20);
+    font-weight: 200;
+}
+.contact .details{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.contact .details .dat{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+    padding: 25px;
+    margin-block: 5px;
+}
+.contact .dat .icon{
+    padding: 15px;
+    margin-right: 10px;
+    color: white;
+    font-size: 25px;
+    background-color: rgb(230, 20, 20);
+    border-radius: 50%;
+}
+.contact .dat .content{
+    text-align: left;
+}
+.contact .dat .content h3{
+    color: #4f4f5a;
+    margin-bottom: 5px;
+}
+.contact .dat .content p{
+    text-align: left;
+    color: black;
+}
+.contact .hours .content  p span{
+    font-weight: bold;
+    color: black;
+}
+.contact .container form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.106);
+    padding: 25px;
+}
+
+.contact .container form input{
+   width: 100%;
+   padding: 15px;
+   margin-block: 10px;
+   border: 1px solid rgba(0,0,0,0.3);
+}
+.contact .container form input:focus{
+    border-color:  rgb(230, 20, 20);
+    outline: none;
+}
+.contact .container form textarea{
+   width: 100%;
+   height: 100px;
+   padding: 15px;
+   font-family: inherit;
+   margin-block: 10px;
+   border: 1px solid rgba(0,0,0,0.3);
+   resize:none ;
+}
+.contact .container form textarea:focus{
+    border-color:  rgb(230, 20, 20);
+    outline: none;
+}
+.contact .container form .btn{
+    border: 0px;
+    padding: 10px 25px;
+    border-radius: 30px;
+    background-color:rgb(230, 20, 20); 
+    margin: 25px 35px 0 0;
+}
+.contact .container form .btn a{
+    text-decoration: none;
+    color: white;
+}
+/* end of contact */
+/* start of footer */
+.footer{
+    background: url(./images/textured-metal-background.jpg) center/cover repeat-x;
+    color: white;
+}
+.footer .container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.footer .left{
+    width: 100%;
+}
+.footer .left h2{
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    color: white;
+    line-height: 0.8;
+}
+.footer .left h2::after{
+    content: ".";
+    color: rgb(230, 20, 20);
+    font-size: 40px;
+}
+.footer .left p,.footer .center p{
+    color: white;
+    text-align: left;
+    margin-block: 15px;
+}
+.footer .left h3{
+    border-bottom: 2px solid rgba(221, 221, 221, 0.4);
+}
+.footer .left .icons{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.footer .left .icons a{
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+}
+.footer .center{
+    width: 100%;
+    margin-block: 15px;
+    text-align: left;
+}
+.footer .center .subscribe .subbox{
+    display: flex;
+    justify-content: space-between;
+    margin-block: 15px;
+    width: 100%;
+}
+.footer .center .subscribe .subbox input{
+    padding: 10px;
+    width: 73%;
+}
+.footer .center .subscribe .subbox button{
+    padding: 10px;
+    background-color:rgb(230, 20, 20);
+    color: white;
+    width: 25%;
+    border: none;
+    font-size: 16px;
+}
+.footer .center .subscribe .subbox button i{
+    margin-right: 5px;
+}
+.footer .center .links ul{
+    padding-left: 0;
+    list-style-type: none;
+    font-size: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-block: 10px;
+}
+.footer .center .links ul li{
+    width: 40%;
+    padding-block: 5px;
+    transition: all 0.3s ease-in;
+}
+.footer .center .links ul li:hover{
+    background: color #222;;
+    transform: translateX(20px);
+}
+.footer .right{
+    text-align: left;
+}
+.footer .right ul{
+    padding-left: 0;
+    margin-block: 10px;
+    list-style-type: none;
+    color:white;
+    font-size: 20px;
+    font-weight: 200;
+}
+.footer .right ul li{
+    display:flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 10px 0 10px 10px;
+}
+.footer .right ul li i{
+    color:rgb(230, 20, 20);
+    width: 5%;
+}
+.footer h3{
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+/* end of footer */

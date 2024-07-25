@@ -1,0 +1,104 @@
+ 
+ /* medium screen */
+ @media screen and (min-width:768px) {
+     .md-100{
+         width: 100%;
+    }
+    .md-50{
+         width: 50%;
+    }
+    .md-33{
+         width: 33.333%;
+    }
+    .md-25{
+         width: 25%;
+    }
+    .md-20{
+         width: 20%;
+    }
+    .md-16{
+         width: 16%;
+    }
+ }
+ /*large screen */
+ @media screen and (min-width:1024px) {
+     .lg-100{
+         width: 100%;
+     }
+     .lg-50{
+         width: 50%;
+     }
+     .lg-33{
+        width:32%
+     }
+     .lg-25{
+         width: 25%;
+     }
+     .lg-20{
+         width: 20%;
+     }
+     .lg-16{
+         width: 16%;
+     }
+     /* media query */
+     .home .header .container{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+     }
+     .home .header .container .right{
+        width: 40%;
+        text-align: left;
+    }
+    .home .header .container .left{
+        display: flex;
+        flex-direction: column;
+    }
+    .home .header .container .left .btns{
+        display: flex;
+        flex-direction: row;
+        align-items: row;
+    }
+
+    .home .header .container .left h2,.home .header .container .left p{
+        text-align: left;
+    }
+    .chefs .cards{
+        flex-direction: row;
+        gap: 25px;
+    }
+    .gallery .imgs{
+        flex-flow: column wrap;
+        width: 100%;
+        height: 160vh;
+    }
+    .contact .details{
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .contact .details .dat{
+        width: 49%;
+    }
+    .contact .container form .inputs{
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .contact .container form .inputs input{
+        width: 49%;
+        
+    }
+    .footer .container{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    .footer .left{
+        width: 24%;
+    }
+    .footer .center{
+        width: 48%;
+    }
+    .footer .right{
+        width: 24%;
+    }
+}
